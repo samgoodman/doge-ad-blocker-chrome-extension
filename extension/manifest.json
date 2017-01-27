@@ -1,27 +1,21 @@
 {
-  "name": "Doge Ad Blocker",
-  "description": "Show a doge ad instead of a normal ad. Much useful. Very ad. Wow.",
-  "author": "Gregory Pike",
-  "version": "0.3.2",
+  "name": "Charity Ad Blocker",
+  "description": "Show a charity ad instead of a normal.",
+  "author": "Sam Goodman, base code from Gregory Pike",
+  "version": "0.1",
   "manifest_version": 2,
   "permissions": [
     "activeTab",
     "storage"
   ],
-  "icons": {
-    "16": "icons/doge-ad-blocker-16.png",
-    "48": "icons/doge-ad-blocker-48.png",
-    "128": "icons/doge-ad-blocker-128.png"
-  },
   "browser_action": {
-    "default_icon": "icons/doge-ad-blocker-19.png",
-    "default_title": "Doge Ad Blocker Settings",
+    "default_title": "Ads For Good Settings",
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["doge-ad-replacer.js"]
+      "js": ["charity-ad-replacer.js"]
     }
   ]
 }
