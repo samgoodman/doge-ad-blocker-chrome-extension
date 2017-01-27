@@ -12,49 +12,49 @@
   var imgurApiClientId = '589f5cc4c215981';
   var imgurApiUrl = 'https://api.imgur.com/3/album/';
 
-  // Data about the doge ads
-  var dogeAds = [
+  // Data about the charity ads
+  var charityAds = [
     {
       'name': '728x90',
       'width': 728,
       'height': 90,
-      'imgurAlbumId': '7KlBQ'
+      'imgurAlbumId': 'O5jHp'
     },
     {
       'name': '970x90',
       'width': 970,
       'height': 90,
-      'imgurAlbumId': '7KlBQ'
+      'imgurAlbumId': 'O5jHp'
     },
     {
       'name': '300x250',
       'width': 300,
       'height': 250,
-      'imgurAlbumId': 'XKatw'
+      'imgurAlbumId': 'GUUCh'
     },
     {
       'name': '250x250',
       'width': 250,
       'height': 250,
-      'imgurAlbumId': 'XKatw'
+      'imgurAlbumId': 'GUUCh'
     },
     {
       'name': '160x600',
       'width': 160,
       'height': 600,
-      'imgurAlbumId': 'DKzVu'
+      'imgurAlbumId': 'T9Jyz'
     },
     {
       'name': '336x280',
       'width': 336,
       'height': 280,
-      'imgurAlbumId': 'XKatw'
+      'imgurAlbumId': 'GUUCh'
     },
     {
       'name': '125x125',
       'width': 125,
       'height': 125,
-      'imgurAlbumId': 'XKatw'
+      'imgurAlbumId': 'GUUCh'
     }
   ];
 
@@ -131,7 +131,7 @@
   chrome.storage.sync.get('disabled', function(value) {
     if (!value.disabled) {
       setTimeout(function() {
-        dogeAds.forEach(function(adData) {
+        charityAds.forEach(function(adData) {
           if (matchAds(adData.width, adData.height)) {
             requestImages(adData);
           }
